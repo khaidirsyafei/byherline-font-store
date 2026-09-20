@@ -49,23 +49,22 @@
   <!-- MAIN CONTENT -->
   <main class="flex-grow">
     
-    <!-- HERO / BANNER ILUSTRASI (Slot Gambar) -->
-    <section class="max-w-7xl mx-auto px-4 md:px-8 pt-6 pb-8">
-      <div class="relative w-full rounded-2xl overflow-hidden bg-slate-900 text-white min-h-[220px] md:min-h-[320px] flex items-center justify-center text-center p-6 shadow-sm">
-        <!-- Nanti ganti 'src' gambar di bawah ini dengan file ilustrasimu -->
-        <img id="hero-banner-img" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&auto=format&fit=crop&q=80" loading="lazy" alt="Banner Ilustrasi" class="absolute inset-0 w-full h-full object-cover opacity-40" />
-        
-        <div class="relative z-10 max-w-2xl">
-          <h1 class="text-2xl md:text-4xl font-semibold tracking-tight leading-snug mb-2">
-            Illustrated & Display Fonts for Your Creative Projects
-          </h1>
-          <p class="text-xs md:text-sm text-slate-200 font-light">Cute, handwritten & playful typography</p>
-        </div>
+    <!-- HERO / BANNER ILUSTRASI (FULL WIDTH TANPA MARGIN PUTIH) -->
+    <section class="w-full relative overflow-hidden bg-slate-900 text-white min-h-[260px] md:min-h-[380px] flex items-center justify-center text-center p-6 shadow-sm">
+      <!-- File Gambar Banner yang di-upload ke GitHub -->
+      <img id="hero-banner-img" src="Screenshot 2026-09-20 214358.png" loading="lazy" alt="Banner Ilustrasi" class="absolute inset-0 w-full h-full object-cover opacity-80" />
+      
+      <!-- Teks Melayang di Atas Gambar Banner -->
+      <div class="relative z-10 max-w-3xl bg-slate-900/40 backdrop-blur-xs p-6 rounded-2xl border border-white/10">
+        <h1 class="text-2xl md:text-4xl font-semibold tracking-tight leading-snug mb-2 drop-shadow-md">
+          Illustrated & Display Fonts for Your Creative Projects
+        </h1>
+        <p class="text-xs md:text-sm text-slate-100 font-light drop-shadow">Cute, handwritten & playful typography</p>
       </div>
     </section>
 
     <!-- SECTION 1: FONTS CATALOG (GRID 2 KOLOM) -->
-    <section id="fonts" class="py-8 px-4 md:px-8">
+    <section id="fonts" class="py-10 px-4 md:px-8">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-8">
           <p id="vpn-helper" class="text-xs text-amber-800 bg-amber-100/70 px-4 py-1.5 rounded-full inline-block font-medium">
@@ -73,7 +72,7 @@
           </p>
         </div>
 
-        <!-- GRID 2 KOLOM SESUAI SKETSA -->
+        <!-- GRID 2 KOLOM -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8" id="font-grid">
           <!-- Cards generated dynamically via JS -->
         </div>
@@ -144,7 +143,6 @@
   </div>
 
   <script>
-    // DATA 10 FONT (Bisa diedit/ditambah sesuai kebutuhan)
     const fontsData = [
       {
         id: "font-1",
@@ -242,14 +240,12 @@
         card.onclick = () => openModal(font.id);
         
         card.innerHTML = `
-          <!-- TEXT SAMPLE (EXAMPLE) -->
           <div class="flex-grow flex items-center justify-center py-6 text-center">
             <p class="text-base md:text-lg text-slate-700 font-medium leading-relaxed tracking-wide">
               "${font.sampleText}"
             </p>
           </div>
 
-          <!-- FOOTER CARD: FONT NAME & PRICE -->
           <div class="flex items-center justify-between pt-4 border-t border-slate-300/60">
             <h3 class="text-xs md:text-sm font-semibold text-slate-800 tracking-wider uppercase">${font.name}</h3>
             <span class="text-xs md:text-sm font-light text-slate-600">${price}</span>
