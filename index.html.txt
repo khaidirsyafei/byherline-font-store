@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Type Foundry - Font & Typography Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-[#FDFBF7] text-slate-800 min-h-screen flex flex-col justify-between">
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-[#FDFBF7]/90 backdrop-blur-md border-b border-slate-200/80 px-6 py-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <a href="#" class="text-xl font-extrabold tracking-tight text-slate-900 flex items-center gap-2">
+        <span class="bg-amber-300 text-slate-900 px-2 py-1 rounded-lg border border-slate-900 shadow-[2px_2px_0px_0px_rgba(15,23,42,1)]">TF</span>
+        <span>StudioFont</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 font-semibold text-sm">
+        <a href="#fonts" class="hover:text-amber-600 transition-colors">Katalog Font</a>
+        <a href="#about" class="hover:text-amber-600 transition-colors">About Me</a>
+        <a href="#license" class="hover:text-amber-600 transition-colors">Lisensi & FAQ</a>
+      </nav>
+
+      <!-- CURRENCY TOGGLE -->
+      <div class="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-300">
+        <button id="btn-idr" onclick="setCurrency('IDR')" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-white text-slate-900 shadow-sm border border-slate-200">
+          🇮🇩 IDR (Mayar)
+        </button>
+        <button id="btn-usd" onclick="setCurrency('USD')" class="px-3 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-500 hover:text-slate-900">
+          🌍 USD (Gumroad)
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow">
+    
+    <!-- HERO SECTION -->
+    <section class="max-w-6xl mx-auto px-6 py-16 md:py-20 text-center">
+      <span class="inline-block bg-pink-100 text-pink-700 font-bold text-xs px-3 py-1.5 rounded-full border border-pink-300 mb-4 shadow-sm">
+        ✨ Premium & Cute Display Fonts
+      </span>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-3xl mx-auto mb-6">
+        Font Ceria & Estetik untuk Proyek Kreatifmu.
+      </h1>
+      <p class="text-slate-600 text-base md:text-lg max-w-xl mx-auto mb-8">
+        Koleksi font buatan tangan untuk buku anak, cetak kaos, desain kemasan, dan *merchandise*. Lengkap dengan lisensi komersial.
+      </p>
+      <a href="#fonts" class="inline-flex items-center gap-2 bg-slate-900 text-white font-bold px-6 py-3.5 rounded-xl shadow-[4px_4px_0px_0px_rgba(251,191,36,1)] hover:translate-y-0.5 transition-all border border-slate-900">
+        Jelajahi Semua Font <i data-lucide="arrow-down" class="w-4 h-4"></i>
+      </a>
+    </section>
+
+    <!-- FONT CATALOG SECTION -->
+    <section id="fonts" class="max-w-6xl mx-auto px-6 py-12">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900">Katalog Font</h2>
+          <p class="text-sm text-slate-500">Klik kartu font untuk melihat spesifikasi detail dan contoh *mockup*.</p>
+        </div>
+        <div id="vpn-helper" class="text-xs bg-amber-50 text-amber-800 p-2.5 rounded-lg border border-amber-200 flex items-center gap-2">
+          <i data-lucide="info" class="w-4 h-4 flex-shrink-0"></i>
+          <span>Pembeli Indonesia? Pastikan opsi mata uang di atas diatur ke <b>IDR</b> untuk transaksi via QRIS/Transfer.</span>
+        </div>
+      </div>
+
+      <!-- FONT GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="font-grid">
+        <!-- Font Cards generated dynamically via JavaScript -->
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION (SEPARATE) -->
+    <section id="about" class="bg-amber-50/60 border-y border-amber-200/80 py-16 px-6 my-12">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
+        <div class="w-32 h-32 md:w-40 md:h-40 rounded-2xl bg-gradient-to-tr from-pink-300 via-purple-300 to-indigo-300 border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] flex-shrink-0 flex items-center justify-center text-4xl">
+          🎨
+        </div>
+        <div>
+          <span class="text-xs font-bold text-amber-700 tracking-wider uppercase mb-1 block">Di Balik Layar</span>
+          <h2 class="text-3xl font-extrabold text-slate-900 mb-3">Halo, Saya Desainer Font Ini!</h2>
+          <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-4">
+            Saya seorang desainer huruf dan ilustrator yang suka membuat tipe tulisan bernuansa ceria, unik, dan ramah anak. Semua font di sini dibuat dengan teliti agar cocok dipadukan dengan berbagai produk fisik maupun digital.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="mailto:emailmu@domain.com" class="inline-flex items-center gap-2 text-xs font-bold bg-white text-slate-900 px-4 py-2.5 rounded-lg border border-slate-900 shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] hover:bg-slate-50">
+              <i data-lucide="mail" class="w-4 h-4"></i> Kontak Email
+            </a>
+            <a href="https://wa.me/628123456789" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold bg-emerald-500 text-white px-4 py-2.5 rounded-lg border border-slate-900 shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] hover:bg-emerald-600">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> Tanya Custom Font (WA)
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LICENSE & FAQ SECTION -->
+    <section id="license" class="max-w-4xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-bold text-slate-900 text-center mb-8">Pertanyaan & Lisensi</h2>
+      <div class="space-y-4 text-sm">
+        <div class="p-4 bg-white rounded-xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 mb-1">Apakah Lisensi Komersial Sudah Termasuk?</h3>
+          <p class="text-slate-600">Ya! Lisensi standar membolehkan penggunaan font untuk produk komersial seperti buku, kaos, poster, dan desain logo UMKM.</p>
+        </div>
+        <div class="p-4 bg-white rounded-xl border border-slate-200">
+          <h3 class="font-bold text-slate-900 mb-1">Format File Apa Saja yang Diterima?</h3>
+          <p class="text-slate-600">Kamu akan mendapatkan format file .OTF, .TTF, serta .WOFF/.WOFF2 untuk kebutuhan website.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 py-8 px-6 text-center text-xs border-t border-slate-800">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© 2026 StudioFont. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-white">Instagram</a>
+        <a href="#" class="hover:text-white">Behance</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FONT DETAIL MODAL -->
+  <div id="font-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl border-2 border-slate-900 shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] w-full max-w-3xl max-h-[90vh] overflow-y-auto p-6 md:p-8 relative">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-900 p-2">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+      <div id="modal-content">
+        <!-- Filled dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // DATA FONTS
+    const fontsData = [
+      {
+        id: "sunny-doodles",
+        name: "Sunny Doodles",
+        category: "Cute Display Font",
+        priceIDR: "Rp 99.000",
+        priceUSD: "$12",
+        linkMayar: "https://mayar.link/contoh-sunny",
+        linkGumroad: "https://gumroad.com/l/contoh-sunny",
+        year: "2026",
+        glyphs: "240 Glyphs",
+        formats: ".OTF, .TTF, .WOFF",
+        desc: "Font tangan dengan nuansa ceria dan playful. Sangat cocok untuk judul buku cerita anak, kaos anak, dan kaos distro bertema santai.",
+        mockups: [
+          "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=600&auto=format&fit=crop&q=60",
+          "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=60"
+        ]
+      },
+      {
+        id: "bubble-bites",
+        name: "Bubble Bites",
+        category: "Bold Bubble Font",
+        priceIDR: "Rp 129.000",
+        priceUSD: "$15",
+        linkMayar: "https://mayar.link/contoh-bubble",
+        linkGumroad: "https://gumroad.com/l/contoh-bubble",
+        year: "2026",
+        glyphs: "310 Glyphs",
+        formats: ".OTF, .TTF, .WOFF, .WOFF2",
+        desc: "Font menggelembung yang tebal dan mencolok. Didesain khusus untuk packaging makanan ringan, sampul notebook, dan desain merch unik.",
+        mockups: [
+          "https://images.unsplash.com/photo-1544816155-12df9643f363?w=600&auto=format&fit=crop&q=60",
+          "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=600&auto=format&fit=crop&q=60"
+        ]
+      }
+    ];
+
+    let currentCurrency = "USD";
+
+    function setCurrency(curr) {
+      currentCurrency = curr;
+      const btnIDR = document.getElementById("btn-idr");
+      const btnUSD = document.getElementById("btn-usd");
+
+      if (curr === "IDR") {
+        btnIDR.className = "px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-white text-slate-900 shadow-sm border border-slate-200";
+        btnUSD.className = "px-3 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-500 hover:text-slate-900";
+      } else {
+        btnUSD.className = "px-3 py-1.5 text-xs font-bold rounded-lg transition-all bg-white text-slate-900 shadow-sm border border-slate-200";
+        btnIDR.className = "px-3 py-1.5 text-xs font-bold rounded-lg transition-all text-slate-500 hover:text-slate-900";
+      }
+      renderFontGrid();
+    }
+
+    function renderFontGrid() {
+      const container = document.getElementById("font-grid");
+      container.innerHTML = "";
+
+      fontsData.forEach(font => {
+        const price = currentCurrency === "IDR" ? font.priceIDR : font.priceUSD;
+        const buyLink = currentCurrency === "IDR" ? font.linkMayar : font.linkGumroad;
+        const buyText = currentCurrency === "IDR" ? "Beli via Mayar" : "Buy on Gumroad";
+
+        const card = document.createElement("div");
+        card.className = "bg-white p-6 rounded-2xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-y-[-2px] transition-all flex flex-col justify-between";
+        card.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-xs font-bold bg-purple-100 text-purple-800 px-2.5 py-1 rounded-md border border-purple-200">${font.category}</span>
+              <span class="text-lg font-extrabold text-slate-900">${price}</span>
+            </div>
+            <h3 class="text-2xl font-black text-slate-900 mb-2 cursor-pointer hover:text-amber-600" onclick="openModal('${font.id}')">${font.name}</h3>
+            <p class="text-slate-500 text-xs mb-6 line-clamp-2">${font.desc}</p>
+            
+            <!-- LIVE PREVIEW BOX -->
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 mb-6">
+              <input type="text" value="Type your preview..." oninput="this.nextElementSibling.innerText = this.value || 'Type your preview...'" class="w-full text-xs bg-transparent border-b border-slate-300 pb-1 mb-2 focus:outline-none focus:border-slate-900 text-slate-400" />
+              <p class="text-2xl font-bold text-slate-800 break-words">Type your preview...</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <button onclick="openModal('${font.id}')" class="flex-1 bg-slate-100 text-slate-900 text-xs font-bold py-3 px-4 rounded-xl border border-slate-300 hover:bg-slate-200">
+              Lihat Detail & Specs
+            </button>
+            <a href="${buyLink}" target="_blank" class="flex-1 bg-amber-400 text-slate-900 text-xs font-extrabold py-3 px-4 rounded-xl border border-slate-900 shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] text-center hover:bg-amber-300">
+              ${buyText}
+            </a>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+      lucide.createIcons();
+    }
+
+    function openModal(fontId) {
+      const font = fontsData.find(f => f.id === fontId);
+      if (!font) return;
+
+      const price = currentCurrency === "IDR" ? font.priceIDR : font.priceUSD;
+      const buyLink = currentCurrency === "IDR" ? font.linkMayar : font.linkGumroad;
+      const buyText = currentCurrency === "IDR" ? "Beli via Mayar (QRIS/Bank)" : "Buy via Gumroad (Card/PayPal)";
+
+      const content = document.getElementById("modal-content");
+      content.innerHTML = `
+        <span class="text-xs font-bold text-amber-600 uppercase tracking-wider">${font.category}</span>
+        <h2 class="text-3xl font-black text-slate-900 mb-2">${font.name}</h2>
+        <p class="text-slate-600 text-sm mb-6">${font.desc}</p>
+
+        <!-- MOCKUP SLIDESHOW / IMAGES -->
+        <div class="mb-6">
+          <h4 class="text-xs font-bold text-slate-900 uppercase mb-2">Contoh Penggunaan (Mockup)</h4>
+          <div class="flex gap-4 overflow-x-auto pb-2 hide-scrollbar">
+            ${font.mockups.map(img => `<img src="${img}" class="w-48 h-32 object-cover rounded-xl border border-slate-300 flex-shrink-0" />`).join('')}
+          </div>
+        </div>
+
+        <!-- SPECS GRID -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 bg-slate-50 p-4 rounded-xl border border-slate-200 mb-6 text-xs">
+          <div><span class="text-slate-400 block">Tahun Rilis:</span><b class="text-slate-800">${font.year}</b></div>
+          <div><span class="text-slate-400 block">Jumlah Glyphs:</span><b class="text-slate-800">${font.glyphs}</b></div>
+          <div><span class="text-slate-400 block">Format File:</span><b class="text-slate-800">${font.formats}</b></div>
+        </div>
+
+        <!-- BUY SECTION -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-amber-50 p-4 rounded-xl border border-amber-200">
+          <div>
+            <span class="text-xs text-amber-800 block">Harga Standard License:</span>
+            <span class="text-2xl font-black text-slate-900">${price}</span>
+          </div>
+          <a href="${buyLink}" target="_blank" class="w-full sm:w-auto bg-amber-400 text-slate-900 font-extrabold text-sm px-6 py-3 rounded-xl border border-slate-900 shadow-[3px_3px_0px_0px_rgba(15,23,42,1)] text-center hover:bg-amber-300">
+            ${buyText}
+          </a>
+        </div>
+      `;
+
+      document.getElementById("font-modal").classList.remove("hidden");
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById("font-modal").classList.add("hidden");
+    }
+
+    // INIT
+    renderFontGrid();
+    lucide.createIcons();
+  </script>
+</body>
+</html>
